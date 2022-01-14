@@ -1,11 +1,22 @@
+package Main;
+
+import Adder.Adder;
+import CalculatorEngine.CalculatorEngine;
+import Divider.Divider;
+import Exceptions.InvalidStatementException;
+import MathProcessable.MathProcessable;
+import Multipler.Multiplier;
+import PowerOf.Powerof;
+import Substracter.Substracter;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         MathProcessable[] handlers = {
-                new Add(),
-                new Power(),
-                new Subtracter(),
+                new Adder(),
+                new Powerof(),
+                new Substracter(),
                 new Divider(),
                 new Multiplier()
         };
@@ -15,7 +26,7 @@ public class Main {
         System.out.println("Please type your command: ");
         String command;
 
-        while (!command=scanner.nextLine().equals("quit")){
+        while (!(command=scanner.nextLine()).equals("quit")){
             try{
                 String process = engine.process(command);
                 System.out.println(process);
