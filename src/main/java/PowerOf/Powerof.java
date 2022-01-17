@@ -5,6 +5,11 @@ import MathProcessable.MathProcessable;
 
 public class Powerof extends  CalculateBase implements MathProcessable {
     @Override
+    public void calculate(){
+        double pow = Math.pow(getLeftVal(), getRightVal());
+        setResult(pow);
+    }
+    @Override
     public String getKeyword(){
         return "power";
     }
@@ -19,10 +24,5 @@ public class Powerof extends  CalculateBase implements MathProcessable {
         calculate();
 
         return getResult();
-    }
-    @Override
-    public void calculate(){
-        double pow = Math.pow(getLeftVal(), getLeftVal());
-        setRightVal(pow);
     }
 }

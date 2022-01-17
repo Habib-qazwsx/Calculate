@@ -23,7 +23,7 @@ public class Main {
         CalculatorEngine engine = new CalculatorEngine(handlers);
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please type your command: ");
+        System.out.println("Please type your command: add, subtract, divide, power, multiply give two number or qute for quit the program ");
         String command;
 
         while (!(command=scanner.nextLine()).equals("quit")){
